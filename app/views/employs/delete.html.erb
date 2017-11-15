@@ -1,0 +1,9 @@
+<%= link_to('<< Back to List', { action: 'index' }) %>
+<div>
+  <h2>Delete Employee</h2>
+  <%= form_for(:employe, :url => { action: 'destroy', id: @employe.id}) %>
+    <p>Are you sure want to permanently delete this Employee?</p>
+
+    <%= submit_tag('Delete Employee')%>
+  <% end %>
+</div>

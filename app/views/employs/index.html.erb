@@ -1,0 +1,25 @@
+<h2>Employees</h2>
+
+<%= link_to('Add new Employee', { action: 'new' }, :class => 'button') %>
+
+<table id="employe">
+  <thead>
+    <tr>
+      <th>Emp Id</th>
+      <th>Name</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employs.each do |employ| %>
+      <tr>
+        <td><%= employ.id %></td>
+        <td><%= employ.name %></td>
+        <td><%= employ.role %></td>
+        <td><%= link_to('Show', { action: 'show', id: employ.id }) %></td>
+        <td><%= link_to('Edit', { action: 'edit', id: employ.id }) %></td>
+        <td><%= link_to('Destroy', employ, method: :delete, data: { confirm: 'Are you sure?' }) %></td>
+      </tr>
+    <% end %> 
+  </tbody>
+</table>

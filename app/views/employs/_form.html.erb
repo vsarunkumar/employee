@@ -1,0 +1,7 @@
+<%= form_for(employ) do |f| %>
+    <%= f.label :name %>
+      <%= f.text_field :name%>
+    <%= f.label :role %>
+    <%= f.select :role, options_for_select([['Programmer', 'programmer'], ['Lead', 'lead'], ['Manager', 'manger']], selected: employ.role) %>
+      <%= f.submit %>
+<% end %>

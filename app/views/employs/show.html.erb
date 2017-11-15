@@ -1,0 +1,20 @@
+<%= link_to('<< Back to List', { action: 'index' }) %>
+<div>
+  <h2>Show Employee</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Emp Id</th>
+        <td><%= @employ.id %></td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td><%= @employ.name %></td>
+      </tr>
+      <tr>
+        <th>Role</th>
+        <td><%= @employ.role %></td>
+      </tr>
+    </thead>
+  </table>
+</div>
